@@ -11,7 +11,7 @@ import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 
 @Service
-public class HtmlPageUrlCrawler {
+public class HtmlPageUrlCrawlerService {
 	
 	public List<String> getListWithUrlsFromWebPage(Document parsedHtmlDocument){
 		String crawledUri;
@@ -23,7 +23,7 @@ public class HtmlPageUrlCrawler {
 		}
 		return listWithBaseUriAndAllPossibleUrisThere;
 	}
-	
+		
 	public Map<String, List<String>> getUrlsFromAnWebpage(List<Document> parsedHtmlDocuments) {
 		Map<String, List<String>> MapWithListWithBaseUriAndAllPossibleUrisThere = new HashMap<String, List<String>>();
 		for (Document parsedHtmlDocument : parsedHtmlDocuments) {

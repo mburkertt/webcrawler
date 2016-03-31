@@ -22,23 +22,22 @@ public class Config  {
     return locale;
   }
   
+  
   @Bean(name= "scanUrl")
-  public List<String> getScanUrl() {
-	  List<String> scanUrl = new ArrayList<String>();
-	  scanUrl.add("https://www.google.de/");
+  public String getScanUrl() {
+	  String scanUrl = "https://sps2010.erninet.ch/news/Pages/NewsHome.aspx";
     return scanUrl;
   }
   
   @Bean(name= "searchWords")
-  public List<String> getSearchWords() {
-	  List<String> searchWords = new ArrayList<String>();
-	  searchWords.add("Matthias Burkert");
+  public String getSearchWords() {
+	  String searchWords = "friedrich";
     return searchWords;
   }
   
   @Bean(name= "crawlingDeepness")
   public int getCrawlingDeepness() {
-    return 4;
+    return 1;
   }
     
 //  @Resource(name = "host")
